@@ -1,16 +1,12 @@
 table{
-    width: 100%;
-    
+    width: 100%;    
 }
-
 table thead{
     background: rgb(233, 245, 243);
 }
-
 table td{
     border: 1px solid;
 }
-
 tbody td{
     background: rgb(233, 242, 243);
 
