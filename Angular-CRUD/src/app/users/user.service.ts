@@ -36,4 +36,10 @@ export class UserService {
     return this.http.put<ResponseUpdate>(_url, request);
   }
 
+  deleteUser(id: string): Observable<any>{
+    const _url = `${this.url}/${id}`;
+
+    return this.http.delete<any>(_url);
+  }
+
 }
