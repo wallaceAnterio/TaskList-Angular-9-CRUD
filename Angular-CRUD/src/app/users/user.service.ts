@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
-import { ResponseUsers, RequestCreate, ResponseCreate } from './user.model';
+import { ResponseUsers, RequestCreate, ResponseCreate, ResponseUser, RequestUpdate, ResponseUpdate } from './user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  RequestUpdate(request: RequestUpdate) {
+    throw new Error("Method not implemented.");
+  }
 
   private url = "https://reqres.in/api/users";
 
@@ -19,6 +22,18 @@ export class UserService {
 
   createUsers(request: RequestCreate): Observable<ResponseCreate>{
     return this.http.post<ResponseCreate>(this.url, request);
+  }
+
+  getUser(id: string ): Observable<ResponseUser>{
+    const _url = `${this.url}/${id}`;
+
+    return this.http.get<ResponseUser>(_url);
+  }
+
+  updateUser(id: string, request: RequestUpdate): Observable<ResponseUpdate>{
+    const _url = `${this.url}/${id}`;
+
+    return this.http.put<ResponseUpdate>(_url, request);
   }
 
 }

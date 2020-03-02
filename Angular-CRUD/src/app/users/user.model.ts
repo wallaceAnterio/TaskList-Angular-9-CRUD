@@ -26,4 +26,20 @@ export interface ResponseCreate {
     createdAt: Date;
 }
 
+//Modelo para o GET user
+
+export interface ResponseUser {
+    data: User
+}
+//Modelos para Update(PUT)
+export interface RequestUpdate {
+    name: string;
+    job: string;
+}
+export interface ResponseUpdate {
+    name: string;
+    job: string;   
+    updatedAt: Date;
+}
+
 
