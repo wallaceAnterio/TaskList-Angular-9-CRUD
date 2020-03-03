@@ -1,13 +1,13 @@
-<h2>Atualizar Usuários</h2>
+<h2 align="center">Atualizar Usuários</h2>
+<br>
 
-<div *ngIf="request">
-    <label>Nome:
+<div *ngIf="request" align="center">
+    <label class="table table-dark" style="width: 14%;">Nome
         <input placeholder="Insira o nome" [(ngModel)]="request.name">
     </label>
-    <br><br>
-    <label>Profissão:
+    <label class="table table-dark" style="width: 14%;">Profissão
         <input placeholder="Insira a Profissão" [(ngModel)]="request.job">
     </label>
-    <br><br>
-    <button (click)="update()">Atualizar</button>    
+   <br>
+    <button class="table table-dark"(click)="update()" style="width: 13%;">Atualizar</button>    
 </div>
