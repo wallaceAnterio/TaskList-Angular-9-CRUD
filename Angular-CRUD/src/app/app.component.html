@@ -1,10 +1,26 @@
-<nav>
-    <ul>
-        <li><a routerLink="/users">Lista de Usuários</a></li>
-        <li><a routerLink="/users/create">Criar Usuários</a></li>
-    </ul>
-</nav>
 
-<div>
-    <router-outlet></router-outlet>
-</div>
+<table class="table table-dark"> 
+    <tr>
+        <td>
+            <label>Lista de Usuários: </label>
+        </td>
+        <td>
+            <nav align="center"> 
+                <button routerLink="/users" style="width: 20%;">Listar</button>
+            </nav>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>Criar Usuários: </label>
+        </td>
+        <td>
+            <nav align="center"> 
+                <button routerLink="/users/create"style="width: 20%;">Criar</button>
+            </nav>
+        </td>
+    </tr>
+</table>
+<router-outlet></router-outlet>
+ 
+

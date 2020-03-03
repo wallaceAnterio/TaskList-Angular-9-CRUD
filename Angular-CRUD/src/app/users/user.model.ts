@@ -27,7 +27,6 @@ export interface ResponseCreate {
 }
 
 //Modelo para o GET user
-
 export interface ResponseUser {
     data: User
 }

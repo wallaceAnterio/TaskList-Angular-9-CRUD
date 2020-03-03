@@ -11,8 +11,6 @@ const routes: Routes = [
   {path: 'users/create', component: CreateUserComponent},
   {path: 'users/update/:id', component: UpdateComponent},
   {path: 'users/delete/:id', component: DeleteUserComponent}
-
-
 ];
 
 @NgModule({

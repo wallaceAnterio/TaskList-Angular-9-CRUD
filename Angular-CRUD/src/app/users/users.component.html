@@ -1,15 +1,15 @@
-<h1>Usuarios</h1>
+<h1 align="center">Lista de Usuários</h1>
 
-<table *ngIf="responseUsers">
-    <thead>
-        <td>Nome</td>
-        <td>Sobrenome</td>
-        <td>...</td>
+<table *ngIf="responseUsers" class="table table-dark" align="center"> 
+    <thead >
+        <td class="text-info">Nome</td>
+        <td class="text-info">Sobrenome</td>
+        <td class="text-info">Opções</td>
     </thead>
     <tbody>
         <tr *ngFor="let user of responseUsers.data">
-            <td>{{ user.first_name }}</td>
-            <td>{{ user.last_name}}</td>
+            <td class="text-danger">{{ user.first_name }}</td>
+            <td class="text-warning">{{ user.last_name}}</td>
             <td>
                 <a routerLink="/users/update/{{user.id}}">Editar</a> |
                 <a routerLink="/users/delete/{{user.id}}">Remover</a>
@@ -19,3 +19,8 @@
         </tr>
     </tbody>
 </table>
+
+
+
+
+
