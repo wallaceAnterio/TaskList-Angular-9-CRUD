@@ -1,13 +1,12 @@
-<h2>Você deseja remover este Usuários?</h2>
+<h2  align="center">Você deseja remover este Usuários?</h2>
 
-<div *ngIf="user">
-    <label>Id: <strong>{{user.id}}</strong></label>
-    <br><br>
-    <label>Nome: <strong>{{user.first_name}}</strong></label>
-    <br><br>
-    <label>Sobrenome: <strong>{{user.last_name}}</strong></label>
-    <br><br>
-    <button (click)="delete()">Confirmar</button>  
-    <button (click)="cancel()">Cancelar</button>    
-
+<div *ngIf="user" align="center">
+    <label class="table table-info" style="width: 14%;">Id: <strong>{{user.id}}</strong></label>
+    <br>
+    <label class="table table-info" style="width: 14%;">Nome: <strong>{{user.first_name}}</strong></label>
+    <br>
+    <label class="table table-info" style="width: 14%;">Sobrenome: <strong>{{user.last_name}}</strong></label>
+    <br>
+    <button class="table table-dark" (click)="delete()" style="width: 7%;">Confirmar</button>
+    <button class="table table-dark"(click)="cancel()" style="width: 7%;">Cancelar</button>
 </div>
